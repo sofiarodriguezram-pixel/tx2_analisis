@@ -2,15 +2,17 @@ import streamlit as st
 from textblob import TextBlob
 from googletrans import Translator
 
-# --- ESTILO MODERNO CON FONDO DE COLOR ---
+# --- ESTILO MODERNO CON FONDO DE COLOR (CORREGIDO) ---
 st.markdown("""
     <style>
-        /* Fondo con gradiente de color */
-        body {
+        /* Fondo general de toda la app */
+        .stApp {
             background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
             font-family: 'Poppins', sans-serif;
+            color: #222;
         }
 
+        /* Contenedor principal */
         .main {
             background: rgba(255, 255, 255, 0.85);
             border-radius: 25px;
@@ -20,7 +22,6 @@ st.markdown("""
         }
 
         h1 {
-            color: #222;
             text-align: center;
             font-size: 2.6em !important;
             margin-bottom: 0.6em;
@@ -62,7 +63,7 @@ st.markdown("""
         }
 
         [data-testid="stSidebar"] {
-            background: rgba(255,255,255,0.6);
+            background: rgba(255,255,255,0.65);
             border-right: 1px solid rgba(255,255,255,0.3);
             padding: 1.5rem 1rem;
         }
