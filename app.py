@@ -2,33 +2,38 @@ import streamlit as st
 from textblob import TextBlob
 from googletrans import Translator
 
-# --- CONFIGURACIÓN DE ESTILO MODERNO ---
+# --- ESTILO MODERNO CON FONDO DE COLOR ---
 st.markdown("""
     <style>
+        /* Fondo con gradiente de color */
         body {
-            background: linear-gradient(135deg, #f9fafb 0%, #eef2f3 100%);
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
             font-family: 'Poppins', sans-serif;
         }
+
         .main {
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.85);
             border-radius: 25px;
             padding: 2rem;
-            box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
-            margin-top: 20px;
+            box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
+            margin-top: 30px;
         }
+
         h1 {
             color: #222;
             text-align: center;
-            font-size: 2.5em !important;
-            margin-bottom: 0.5em;
-            background: linear-gradient(90deg, #0061ff, #60efff);
+            font-size: 2.6em !important;
+            margin-bottom: 0.6em;
+            background: linear-gradient(90deg, #0072ff, #b457ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         h2, h3 {
             color: #333;
             font-style: italic;
         }
+
         textarea, .stTextArea textarea {
             background: #f5f7fa;
             border-radius: 12px;
@@ -36,10 +41,12 @@ st.markdown("""
             padding: 1rem;
             font-size: 1.1em;
             color: #333;
-            box-shadow: inset 3px 3px 8px rgba(0,0,0,0.05), inset -3px -3px 8px rgba(255,255,255,0.8);
+            box-shadow: inset 3px 3px 8px rgba(0,0,0,0.05),
+                        inset -3px -3px 8px rgba(255,255,255,0.8);
         }
+
         .stButton button {
-            background: linear-gradient(90deg, #0078ff, #00e5ff);
+            background: linear-gradient(90deg, #8e2de2, #4a00e0);
             color: white;
             border: none;
             padding: 0.7rem 1.5rem;
@@ -48,17 +55,20 @@ st.markdown("""
             transition: 0.3s ease;
             font-weight: 600;
         }
+
         .stButton button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 4px 10px rgba(0, 136, 255, 0.3);
+            box-shadow: 0 4px 10px rgba(142, 45, 226, 0.4);
         }
+
         [data-testid="stSidebar"] {
-            background: #f0f2f5;
-            border-right: 1px solid #e0e0e0;
+            background: rgba(255,255,255,0.6);
+            border-right: 1px solid rgba(255,255,255,0.3);
             padding: 1.5rem 1rem;
         }
+
         .stExpander {
-            background-color: #ffffff !important;
+            background-color: rgba(255,255,255,0.85) !important;
             border-radius: 15px !important;
             border: 1px solid #ddd !important;
             box-shadow: 0 3px 10px rgba(0,0,0,0.05) !important;
